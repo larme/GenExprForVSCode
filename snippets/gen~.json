@@ -1,0 +1,56 @@
+{
+	"buffer": {
+		"prefix": "buffer",
+		"body": "\nBuffer ${1:name}(\"${2:name}\");\n${3:${4:${1:name}_dim} = dim(${1:name});\n${5:${1:name}_chans} = channels(${1:name});}\n",
+		"description": "Buffer object",
+		"scope": "source.genexpr"
+	},
+	"cycle": {
+		"prefix": "cycle",
+		"body": "\n${1:sampleName}${2:, ${3:sampleIndex}} = cycle(${4:440.0}${5:, name=\"${6:buffername}\"});\n",
+		"description": "Cycle operator with frequency input",
+		"scope": "source.genexpr"
+	},
+	"cyclePhase": {
+		"prefix": "cyclePhase",
+		"body": "\n${1:sampleName}${2:, ${3:sampleIndex}} = cycle(${4:0}, index=\"phase\"${5:, name=\"${6:buffername}\"});\n",
+		"description": "Cycle operator with phase input",
+		"scope": "source.genexpr"
+	},
+	"data": {
+		"prefix": "data",
+		"body": "\nData ${1:name}(${2:${3:512}}${4:, ${5:1}});\n${6:${7:${1:name}_dim} = dim(${1:name});\n${8:${1:name}_chans} = channels(${1:name});}\n",
+		"description": "Data Object",
+		"scope": "source.genexpr"
+	},
+	"delay": {
+		"prefix": "delay",
+		"body": "\nDelay ${1:name}(${2:44100});\n${3:${4:tmp} = ${1:name}.read(${5:44100}${6:, interp=\"${7:linear}\"});\n${8:${1:name}.write(${9:someSample});}}\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"history": {
+		"prefix": "history",
+		"body": "\nHistory ${1:name}(${2:0.0});\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"peek": {
+		"prefix": "peek",
+		"body": "\n${1:sampleOut}${2:, ${3:sampleIndex}} = peek(${4:bufferOrDataName}, ${5:position}, 0${6: /* channel offset */}, index=\"${7:samples}\", channels=${8:1});\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"poke": {
+		"prefix": "poke",
+		"body": "\npoke(${1:bufferOrDataName}, ${2:sampleToWrite}, ${3:sampleIndex}, 0${4: /* channel */}, 0${5: /* overdub */}, index=\"${6:samples}\");\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"wrap": {
+		"prefix": "wrap",
+		"body": "\n${1:wrappedValue} = wrap(${2:input}, ${3:minimum}, ${4:maximum});\n",
+		"description": "Wrap a number between 2 values",
+		"scope": "source.genexpr"
+	}
+}

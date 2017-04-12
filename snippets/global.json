@@ -1,0 +1,26 @@
+{
+	"for": {
+		"prefix": "for",
+		"body": "\nfor (${1:i} = ${2:0}; ${1:i} < ${3:maximum}; ${1:i} += ${4:1}) {\n\t${5:/* something to do multiple times */}\n}\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"function": {
+		"prefix": "function",
+		"body": "\n${1:functionName}(${2:arg1}${3:, ${4:arg2...}})\n{\n\t${5:/* your function body */}\n}\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"param": {
+		"prefix": "param",
+		"body": "\nParam ${1:paramName}(${2:0.0}${3:${4:, min=${5:0.0}}${6:, max=${7:1.0}}});\n",
+		"description": "",
+		"scope": "source.genexpr"
+	},
+	"return": {
+		"prefix": "return",
+		"body": "\nreturn ${1:something}${2:, ${3:somethingElse}${4:, ${5:andAThirdOne}}};\n",
+		"description": "",
+		"scope": "source.genexpr"
+	}
+}

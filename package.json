@@ -1,0 +1,37 @@
+{
+    "name": "genexpr",
+    "displayName": "genexpr",
+    "description": "C74's genexpr",
+    "version": "0.0.1",
+    "publisher": "zsy",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "genexpr",
+            "aliases": ["GenExpr", "genexpr"],
+            "extensions": [".gendsp",".genexpr"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "genexpr",
+            "scopeName": "source.genexpr",
+            "path": "./syntaxes/GenExpr.tmLanguage"
+        }],
+        "snippets": [
+            {
+                "language": "genexpr",
+                "path": "./snippets/global.json"
+            },
+            {
+                "language": "genexpr",
+                "path": "./snippets/gen~.json"
+            }
+        ]
+
+    }
+}

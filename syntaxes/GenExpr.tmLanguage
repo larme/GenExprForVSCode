@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>gendsp</string>
+		<string>genexpr</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>(?x)
+		 /\*\*(?!\*)
+		|^(?![^{]*?//|[^{]*?/\*(?!.*?\*/.*?\{)).*?\{\s*($|//|/\*(?!.*?\*/.*\S))\b
+	</string>
+	<key>foldingStopMarker</key>
+	<string>(?&lt;!\*)\*\*/|^\s*\}\b</string>
+	<key>name</key>
+	<string>GenExpr</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>source.c</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.genexpr</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b(in|out|in1|in2|in3|in4|in5|in6|in7|in8|in9|out1|out2|out3|out4|out5|out6|out7|out8|out9|in10|in11|in12|in13|in14|in15|in16|in17|in18|in19|out10|out11|out12|out13|out14|out15|out16|out17|out18|out19|constant|degtorad|DEGTORAD|e|E|f|fftfullspect|FFTFULLSPECT|ffthop|FFTHOP|fftoffset|FFTOFFSET|fftsize|FFTSIZE|float|halfpi|HALFPI|i|int|invpi|INVPI|ln10|LN10|ln2|LN2|log10e|LOG10E|log2e|LOG2E|pi|PI|radtodeg|RADTODEG|samplerate|SAMPLERATE|sqrt1_2|SQRT1_2|sqrt2|SQRT2|twopi|TWOPI|vectorsize|VECTORSIZE)\b</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.genexpr</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b(Buffer|channels|cycle|Data|dim|lookup|nearest|peek|poke|sample|splat|wave|atodb|dbtoa|ftom|mstosamps|mtof|sampstoms|fixdenorm|fixnan|isdenorm|isnan|Delay|History|fftinfo|change|dcblock|delta|interp|latch|phasewrap|sah|\*=|mulequals|\+=|accum|plusequals|counter|phasor|rate|train|triangle)\b</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.genexpr</string>
+	<key>uuid</key>
+	<string>acf4bdb6-b7b6-498e-b737-2fedd7355b14</string>
+</dict>
+</plist>
